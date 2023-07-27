@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tony Sanchez - Software Developer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+    <header class="header light-mode">
+        <div class="header-content">
+            <h1>Tony Sanchez</h1>
+            <p class="subtitle">Software Developer</p>
+            <div class="social-links light-mode">
+                <a href="https://github.com/TonySanchez27" target="_blank" class="icon-link">
+                    <img src="GitHub.png" alt="GitHub" class="icon">
+
+                </a>
+                <a href="https://www.linkedin.com/in/tony-sanchez-b35a5323a/" target="_blank" class="icon-link">
+                    <img src="Linkedin.png" alt="LinkedIn" class="icon">
+
+                </a>
+            </div>
+            <button onclick="toggleDarkMode()" class="toggle-dark-mode">Toggle Dark Mode</button>
+        </div>
+    </header>
+
+    <nav class="light-mode">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about" class="light-mode">
+            <h2>About Me</h2>
+            <div class="profile">
+                <p>
+                    Hello! My name is Tony Sanchez and I'm a software developer from Ridgeway, VA. I earned a B.S. in Computer Science
+                    in December of 2022. I am passionate about software development and learn more every day! As of now, I have experience
+                    coding in Java, C#, Php, Ada, HTML, CSS, and JavaScript. Currently, I'm learning Python. I also have a experience working with
+                    a variety of databases and consider myself fluent in SQL.
+                </p>
+            </div>
+        </section>
+
+        <section id="projects" class="light-mode">
+            <h2>Projects</h2>
+            <div class="project light-mode">
+                <h3>VVS (Vaccine Validation Service)</h3>
+                <p>
+                    A group of developers and I were able to create a system that would theoretically allow any and all stores, events, restaurants
+                    and more to validate the vaccination status of all who visit. The system employs the Amazon cloud database DynamoDB, enabling the
+                    database to be accessed from anywhere by authorized individuals.
+                </p>
+                <a href="https://github.com/TonySanchez27/DynamoDB/tree/main/DynamoDbScripts-main" class="light-mode">View Project</a>
+            </div>
+            <div class="project light-mode">
+                <h3>Fitness Tracker Web Application</h3>
+                <p>
+                    A Php fitness application capable of creating user accounts, displaying a library of workouts and how-to guides for each exercise,
+                    planning future workouts, tracking weight loss progress, tracking strength gain progress, and more.
+                </p>
+                <a href="https://github.com/TonySanchez27/php-fitness-app/tree/main" class="light-mode">View Project</a>
+            </div>
+        </section>
+
+        <section id="contact" class="light-mode">
+            <h2>Contact Me</h2>
+            <p>
+                Phone: +1 (276)-252-4875
+            </p>
+            <p>
+                Email: t.sanchez914@gmail.com
+            </p>
+        </section>
+    </main>
+
+    <footer class="light-mode">
+        <p>&copy; 2023 Tony Sanchez. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Function to toggle between light and dark mode
+        function toggleDarkMode() {
+            const body = document.body;
+            body.classList.toggle('dark-mode');
+
+            // Save user preference to local storage
+            const isDarkMode = body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', isDarkMode);
+        }
+
+        // Check if dark mode is set in local storage and apply it
+        const isDarkMode = localStorage.getItem('darkMode');
+        if (isDarkMode === 'true') {
+            document.body.classList.add('dark-mode');
+        }
+    </script>
+</body>
+</html>
