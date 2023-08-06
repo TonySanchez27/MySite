@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StateLine Powerwash</title>
+    <link rel="stylesheet" href="powerstyles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <!-- Replace the "your-logo.png" with the actual path to your logo -->
+            <img src="ClearOne.png" alt="StateLine Powerwash">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="home-section">
+            <div class="home-content">
+                <h1>Welcome to StateLine Powerwash</h1>
+                <p>We provide top-notch power washing services for your residential and commercial needs.</p>
+                <button class="cta-btn" onclick="sendEmail()">Get a Quote</button>
+            </div>
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
+            <ul class="services-list">
+                <li>Residential Power Washing</li>
+                <li>Commercial Power Washing</li>
+                <li>Deck and Patio Cleaning</li>
+                <li>Exterior Building Cleaning</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p class="contact-heading">For inquiries and quotes, please fill out the form below:</p>
+            <form onsubmit="sendEmail(); reset(); return false;">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" required>
+                <label for="message">Message:</label>
+                <textarea id="message" rows="4" required></textarea>
+
+                <button type="submit" class="cta-btn">Submit</button>
+            </form>
+            <div class="contact-social">
+                <a href="tel:+1234567890">Phone: +1 (234) 567-890</a>
+                <a href="https://www.linkedin.com/in/tony-sanchez-b35a5323a/" target="_blank" class="icon-link">
+                    <img src="fourthF.png" alt="LinkedIn" class="icon">
+
+                </a>
+                <a href="https://www.linkedin.com/in/tony-sanchez-b35a5323a/" target="_blank" class="icon-link">
+                    <img src="secondI.png" alt="Instagram" class="icon">
+
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 StateLine Powerwash. All rights reserved.</p>
+    </footer>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail(){
+              Email.send({
+      Host : "smtp.elasticemail.com",
+      Username : "t.sanchez914@gmail.com",
+      Password : "BAD8864230DEC4B6E887DD3A572E5227157C",
+      To : 'thomtj725@gmail.com',
+      From : "t.sanchez914@gmail.com",
+      Subject : "This is the subject",
+      Body : "And this is the body"
+      }).then(
+      message => alert(message)
+      );
+            }
+    </script>
+
+</body>
+</html>
